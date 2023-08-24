@@ -17,6 +17,8 @@ function App() {
 	const [showUpdateModal, setShowUpdateModal] = useState(false);
 
 	const insertTodo = () => {
+        if(!todoTitle || !todoContent || !todoDate) 
+            return alert("Please fill all the fields");
 		axios
 			.post("http://localhost:3000/api/insertTodos", {
 				todoTitle,
@@ -24,7 +26,6 @@ function App() {
 				todoDate,
 			})
 			.then((res) => {
-				console.log(res);
 				fetchData();
 				setShowInsertModal(false);
                 $("#todo").val("");
@@ -37,6 +38,8 @@ function App() {
 	};
 
 	const updateTodo = () => {
+        if (!todoTitle || !todoContent || !todoDate)
+			return alert("Please fill all the fields");
 		axios
 			.put(`http://localhost:3000/api/updateTodoById/${todoId}`, {
 				todoTitle,
@@ -44,7 +47,6 @@ function App() {
 				todoDate,
 			})
 			.then((res) => {
-				console.log(res);
 				fetchData();
                 setShowUpdateModal(false);
                 $("#todo").val("");
@@ -60,7 +62,6 @@ function App() {
         axios
             .delete(`http://localhost:3000/api/deleteTodoById/${todoId}`)
             .then((res) => {
-                console.log(res);
                 fetchData();
             })
             .catch((err) => {

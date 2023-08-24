@@ -15,7 +15,6 @@ const UpdateModal = ({
 }) => {
 	useEffect(() => {
 		if (todoId !== 0) {
-			console.log(todoId);
 			axios
 				.get(`http://localhost:3000/api/getTodoById/${todoId}`)
 				.then((res) => {
