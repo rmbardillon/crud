@@ -61,6 +61,8 @@ function App() {
 	};
 
     const deleteTodo = (todoId) => {
+        const confirmBox = window.confirm("Do you really want to delete this todo?");
+        if (!confirmBox) return;
         axios
             .delete(`http://localhost:3000/api/deleteTodoById/${todoId}`)
             .then((res) => {
