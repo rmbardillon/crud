@@ -16,9 +16,10 @@ function App() {
     const [showInsertModal, setShowInsertModal] = useState(false);
 	const [showUpdateModal, setShowUpdateModal] = useState(false);
 
-	const insertTodo = () => {
+	const insertTodo = (e) => {
+        e.preventDefault();
         if(!todoTitle || !todoContent || !todoDate) 
-            return alert("Please fill all the fields");
+            return alert("Please fill all the fields!");
 		axios
 			.post("http://localhost:3000/api/insertTodos", {
 				todoTitle,
@@ -37,9 +38,10 @@ function App() {
 			});
 	};
 
-	const updateTodo = () => {
+	const updateTodo = (e) => {
+        e.preventDefault();
         if (!todoTitle || !todoContent || !todoDate)
-			return alert("Please fill all the fields");
+			return alert("Please fill all the fields!");
 		axios
 			.put(`http://localhost:3000/api/updateTodoById/${todoId}`, {
 				todoTitle,
@@ -85,7 +87,7 @@ function App() {
 	}, [todos]);
     
 	return (
-		<div className="container p-5">
+		<div className="container p-5 mt-5" id="App">
 			<InsertModal
 				todoTitle={todoTitle}
 				setTodoTitle={setTodoTitle}
@@ -109,32 +111,34 @@ function App() {
 				show={showUpdateModal}
 				setShow={setShowUpdateModal}
 			/>
-			<div className="row">
+			<div className="row mb-3">
 				<div className="col-md-6">
 					<h1 id="header">To Do List</h1>
 				</div>
-				<div className="col-md-6 d-flex justify-content-end">
+				<div className="col-md-6 d-flex justify-content-end align-items-center">
 					<button
 						type="button"
-						className="btn btn-success w-25"
+						className="btn btn-success btn-sm w-25 h-75"
 						onClick={() => setShowInsertModal(true)}
 					>
 						Insert
 					</button>
 				</div>
 			</div>
-			<table className="table">
+			<table className="table table-sm table-dark table-bordered text-center">
 				<thead>
 					<tr>
-						<th>Firstname</th>
-						<th>Lastname</th>
-						<th>Email</th>
+                        <th>#</th>
+						<th>Todo Title</th>
+						<th>Todo Content</th>
+						<th>Todo Date</th>
 						<th>Actions</th>
 					</tr>
 				</thead>
 				<tbody>
 					{todos.map((todo, index) => (
 						<tr key={index}>
+                            <td>{index + 1}</td>
 							<td>{todo.todoTitle}</td>
 							<td>{todo.todoContent}</td>
 							<td>{todo.todoDate}</td>

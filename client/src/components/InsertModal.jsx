@@ -35,6 +35,7 @@ const InsertModal = ({
 									onChange={(e) =>
 										setTodoTitle(e.target.value)
 									}
+                                    required
 								/>
 								<label htmlFor="todo">To Do Title</label>
 							</div>
@@ -47,6 +48,7 @@ const InsertModal = ({
 									onChange={(e) =>
 										setTodoContent(e.target.value)
 									}
+                                    required
 								/>
 								<label htmlFor="todoContent">
 									To Do Content
@@ -61,6 +63,7 @@ const InsertModal = ({
 									onChange={(e) =>
 										setTodoDate(e.target.value)
 									}
+                                    required
 								/>
 								<label htmlFor="todoDate">To Do Date</label>
 							</div>
@@ -75,7 +78,7 @@ const InsertModal = ({
 							Close
 						</button>
 						<button
-							type="button"
+							type="submit"
 							className="btn btn-primary"
 							onClick={insertTodo}
 						>

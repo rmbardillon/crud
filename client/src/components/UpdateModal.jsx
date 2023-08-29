@@ -52,6 +52,7 @@ const UpdateModal = ({
 									onChange={(e) =>
 										setTodoTitle(e.target.value)
 									}
+                                    required
 								/>
 								<label htmlFor="todo">To Do Title</label>
 							</div>
@@ -65,6 +66,7 @@ const UpdateModal = ({
 									onChange={(e) =>
 										setTodoContent(e.target.value)
 									}
+                                    required
 								/>
 								<label htmlFor="todoContent">
 									To Do Content
@@ -80,6 +82,7 @@ const UpdateModal = ({
 									onChange={(e) =>
 										setTodoDate(e.target.value)
 									}
+                                    required
 								/>
 								<label htmlFor="todoDate">To Do Date</label>
 							</div>
@@ -94,7 +97,7 @@ const UpdateModal = ({
 							Close
 						</button>
 						<button
-							type="button"
+							type="submit"
 							className="btn btn-primary"
 							onClick={updateTodo}
 						>

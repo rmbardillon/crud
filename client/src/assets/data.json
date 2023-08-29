@@ -1,0 +1,52 @@
+[
+	{
+		"todoTitle": "Buy groceries for dinner",
+		"todoContent": "Pick up vegetables, chicken, and pasta for tonight's dinner.",
+		"todoDate": "2023-08-25"
+	},
+	{
+		"todoTitle": "Finish reading 'The Great Gatsby'",
+		"todoContent": "Read the last few chapters of the novel and make notes.",
+		"todoDate": "2023-08-26"
+	},
+	{
+		"todoTitle": "Prepare presentation for team meeting",
+		"todoContent": "Gather data and create slides for the upcoming team meeting.",
+		"todoDate": "2023-08-27"
+	},
+	{
+		"todoTitle": "Call mom to wish her happy birthday",
+		"todoContent": "Give mom a birthday call and plan a small celebration.",
+		"todoDate": "2023-09-02"
+	},
+	{
+		"todoTitle": "Go for a morning jog",
+		"todoContent": "Start the day with a refreshing jog in the nearby park.",
+		"todoDate": "2023-09-05"
+	},
+	{
+		"todoTitle": "Update resume and LinkedIn profile",
+		"todoContent": "Revise the resume and ensure the LinkedIn profile is up to date.",
+		"todoDate": "2023-09-08"
+	},
+	{
+		"todoTitle": "Attend virtual JavaScript workshop",
+		"todoContent": "Participate in the online workshop to learn advanced JavaScript concepts.",
+		"todoDate": "2023-09-10"
+	},
+	{
+		"todoTitle": "Organize garage sale",
+		"todoContent": "Sort through items and plan a garage sale to declutter the garage.",
+		"todoDate": "2023-09-15"
+	},
+	{
+		"todoTitle": "Plan weekend getaway",
+		"todoContent": "Research and book accommodations for a relaxing weekend trip.",
+		"todoDate": "2023-09-20"
+	},
+	{
+		"todoTitle": "Start learning a new language",
+		"todoContent": "Enroll in online language courses and practice daily.",
+		"todoDate": "2023-09-25"
+	}
+]
