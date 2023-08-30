@@ -21,7 +21,7 @@ function App() {
         if(!todoTitle || !todoContent || !todoDate) 
             return alert("Please fill all the fields!");
 		axios
-			.post("http://localhost:3000/api/insertTodos", {
+			.post("https://login-services-netzwelt.onrender.com/api/insertTodos", {
 				todoTitle,
 				todoContent,
 				todoDate,
@@ -43,7 +43,7 @@ function App() {
         if (!todoTitle || !todoContent || !todoDate)
 			return alert("Please fill all the fields!");
 		axios
-			.put(`http://localhost:3000/api/updateTodoById/${todoId}`, {
+			.put(`https://login-services-netzwelt.onrender.com/api/updateTodoById/${todoId}`, {
 				todoTitle,
 				todoContent,
 				todoDate,
@@ -64,7 +64,7 @@ function App() {
         const confirmBox = window.confirm("Do you really want to delete this todo?");
         if (!confirmBox) return;
         axios
-            .delete(`http://localhost:3000/api/deleteTodoById/${todoId}`)
+            .delete(`https://login-services-netzwelt.onrender.com/api/deleteTodoById/${todoId}`)
             .then((res) => {
                 fetchData();
             })
@@ -75,7 +75,7 @@ function App() {
 
 	const fetchData = () => {
 		axios
-			.get("http://localhost:3000/api/getTodos")
+			.get("https://login-services-netzwelt.onrender.com/api/getTodos")
 			.then((res) => {
 				setTodos(res.data);
 			})
@@ -86,7 +86,7 @@ function App() {
 
 	useEffect(() => {
 		fetchData();
-	}, [todos]);
+	}, []);
     
 	return (
 		<div className="container p-5 mt-5" id="App">

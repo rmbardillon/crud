@@ -8,7 +8,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 // Connect to MongoDB
-const connectionString = "mongodb://localhost:27017/crud";
+const connectionString =
+	"mongodb+srv://romskybardillon:JqEqCxCkxrAsnTNv@customers.whhlfly.mongodb.net/crud?retryWrites=true&w=majority";
 mongoose.connect(connectionString, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
