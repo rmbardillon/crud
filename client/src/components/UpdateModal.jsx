@@ -16,7 +16,7 @@ const UpdateModal = ({
 	useEffect(() => {
 		if (todoId !== 0) {
 			axios
-				.get(`http://localhost:3000/api/getTodoById/${todoId}`)
+				.get(`https://login-services-netzwelt.onrender.com/api/getTodoById/${todoId}`)
 				.then((res) => {
 					setTodoTitle(res.data.todoTitle);
 					setTodoContent(res.data.todoContent);
